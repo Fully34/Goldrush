@@ -1,5 +1,27 @@
 
 /*===========================================================================*/
+                        /* ~~~ Utility ~~~ */ 
+/*===========================================================================*/
+
+.clearfix{
+    overflow: hidden;
+    z-index: 10;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.dynamic-background {
+    background-color: gold;
+    border: 2px dashed black;
+    border-radius: 10px;
+}
+
+.padding {
+    padding: 5px;
+}
+/*===========================================================================*/
                         /* ~~~ Goldrush Stuff ~~~ */ 
 /*===========================================================================*/
 
@@ -14,7 +36,6 @@
 
 .map-container {
 	width: 1100px;
-	margin: 0 auto; 
 	position: relative;
 }
 
@@ -31,13 +52,25 @@
 
 /*===========================  Dynamic Markers  =============================*/
 
+.marker-container {
+    position: absolute;
+}
+
 .marker {
+    display: inline-block;
 	height: 10px;
 	width: 10px;
-	background-color: pink;
+	background-color: gold;
 	border-radius: 100px;
-	position: absolute;
+    border: 1px solid black;
+    margin: 0;
+    padding: 0;
+}
 
-
-
+.input-container {
+    color: black;
+    font-family: 'Poiret One', sans-serif;
+    font-size: 18px;
+    max-width: 500px;
+    word-wrap: break-word;
 }
