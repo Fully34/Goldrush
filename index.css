@@ -60,17 +60,28 @@
     display: inline-block;
 	height: 10px;
 	width: 10px;
-	background-color: gold;
 	border-radius: 100px;
-    border: 1px solid black;
+    width: 0; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #323C6B;
     margin: 0;
     padding: 0;
 }
 
+
+/*==============================  INPUTS  =============================*/
+        
 .input-container {
     color: black;
     font-family: 'Poiret One', sans-serif;
     font-size: 18px;
     max-width: 500px;
     word-wrap: break-word;
+}
+
+.input-field {
+    border-radius: 5px;
+    border: 1px solid black;
 }

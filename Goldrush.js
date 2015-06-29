@@ -16,10 +16,10 @@ $(function(){
 		var y = event.pageY;
 		
         // Store marker elements as a jQuery object
-        var markDot = $("<div class='marker-container clearfix'><div class='marker'></div><div class='input-container'><input class='input-field'></div></div>").css({
+        var markDot = $("<div class='marker-container clearfix'><div class='marker'></div><div class='input-container'><input class='input-field padding'></div></div>").css({
 
-            top     : (y - 14) + "px",
-            left    : (x - 13) + "px"
+            top     : (y - 19) + "px",
+            left    : (x - 22) + "px"
         });
 
         // Check if we are clicking on a previous marker and/or input container
@@ -55,19 +55,31 @@ $(function(){
     // });
 
     // Hover to un-hide input-container div and text
-    $('.map-container').on('mousemove', '.marker', function(){
+    $('.map-container').on('mouseenter', '.marker', function(){
 
-        $(this).siblings('.input-container').show(700);
+        var container = $(this).siblings('.input-container');
+
+        if ( container.hasClass('hidden') ) {
+
+            container.removeClass('hidden')
+
+        } else {
+
+            container.show(700, function(){
+
+                container.addClass('hidden')
+            });
+        };
     });
 
     //Hide on mouseout if there is text in the input field
-    $('.map-container').on('mouseout', '.marker', function(){
+    // $('.map-container').on('mouseenter', '.marker', function(){
 
-        if( $(this).siblings('.input-container').text().length !== 0){
+    //     if( $(this).siblings('.input-container').text().length !== 0){
 
-            $(this).siblings('.input-container').hide(700);
-        }
-    });
+    //         $(this).siblings('.input-container').hide(700);
+    //     }
+    // });
 
 
     // Remove the whole marker
