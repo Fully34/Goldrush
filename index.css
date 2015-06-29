@@ -1,6 +1,11 @@
-/*CSS does not interact with Javascript*/
+
+/*===========================================================================*/
+                        /* ~~~ Goldrush Stuff ~~~ */ 
+/*===========================================================================*/
 
 
+/*==============================  MAP  =============================*/
+        
 .map{
 	width : 100%;
 
@@ -13,6 +18,8 @@
 	position: relative;
 }
 
+/*===========================  X/Y coordinates  =============================*/
+        
 #log{
 	height : 30px;
 	position: fixed;
@@ -22,6 +29,8 @@
 	border: 1px solid white;
 }
 
+/*===========================  Dynamic Markers  =============================*/
+
 .marker {
 	height: 10px;
 	width: 10px;
@@ -29,6 +38,6 @@
 	border-radius: 100px;
 	position: absolute;
 
-	/*If we did position: relative; that would mean the markers would be IN the document flow and would be added after their siblings.  By using absolute, we take the markers out of the document flow so we can position them more freely. */ 
+
 
 }
